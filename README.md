@@ -11,6 +11,7 @@ The main objective of the project is to build a system that helps to improve sal
 - Perform sentiment analysis on the imputed reviews to predict their polarity, using the Apriori algorithm, and collaborative filtering techniques
 - Develop the system for users, review and rate products
 - The project implementation will begin in February and end in April 2021
+
 ## Project Scope
 - Product rating will be done from users’ reviews via the platform only
 - The system will be accessed via a web-interface; no mobile view support will be provided.
@@ -28,3 +29,6 @@ The following technical tools and requirements will facilitate the development o
 - Apriori algorithm that uses association rules to build our prediction model.
 - Flask web framework: to facilitate the backend development
 
+## Project TODOs
+- [ ] Implement and classify sentiment analysis
+- [ ] ...
