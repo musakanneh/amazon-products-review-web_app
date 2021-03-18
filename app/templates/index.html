@@ -1,30 +1,35 @@
 {% extends 'base.html' %} {% block body %}
-<header class="header">
-   <!--  <h2 class="">Amazon Product Reviews</h2> -->
-<h3>Logo</h3>
+<header>
+    <!--  <h2 class="">Amazon Product Reviews</h2> -->
+    Amazon Review Sentiment Analysis Web Application
 </header>
 <div class="container">
-    <form method="POST">
-        {{ form.hidden_tag() }} {{form.category.label}} {{form.category()}} {{ form.review.label}} {{ form.review(cols='100',rows='100')}}
-        <div class="row">
-            <button type="submit" class="button-primary">Submit</button>
-        </div>
-    </form>
-    {% if prediction %}
-    <div class="">
-        <img src="{{url_for('static', filename='images/' + prediction + '.jpeg')}}" height="" />
-        <br /> The predicted probability is :
-        <p style="color:red;">{{ prob }} %.</p>
-        <div class="six columns">
-            <!--  Your Chart or any other form of visualizations -->
-            <div id="chart"></div>
-        </div>
+    <div>
+        <form method="POST">
+            {{ form.hidden_tag() }} {{form.category.label}} {{form.category()}} {{ form.review.label}} {{ form.review(cols='100',rows='20')}}
+            <br>
+            <div>
+                <button type="submit" class="button-primary">Submit your review</button>
+            </div>
+        </form>
     </div>
-    {% endif %}
+    <div>
+        {% if prediction %}
+        <div class="">
+            <img src="{{url_for('static', filename='images/' + prediction + '.jpeg')}}" />
+            <br /> The predicted probability is :
+            <p style="color:green;">{{ prob }} %.</p>
+            <div>
+                <!-- <div id="chart"></div> -->
+            </div>
+        </div>
+        {% endif %}
+    </div>
 </div>
+<footer>
+    <p>Make by: Musa Kanneh - African Leadership University</p>
+</footer>
 {% endblock body %} {% block js %}
 <script type="text/javascript">
-    // your JS Code
-    // Your D3 code could be here
 </script>
 {% endblock js %}
