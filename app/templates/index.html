@@ -1,9 +1,9 @@
- {% extends 'base.html' %} {% block body %}
-<section class="header">
-    <h2 class="title">Amazon Product Reviews</h2>
-</section>
-<hr />
-<div class="content">
+{% extends 'base.html' %} {% block body %}
+<header class="header">
+   <!--  <h2 class="">Amazon Product Reviews</h2> -->
+<h3>Logo</h3>
+</header>
+<div class="container">
     <form method="POST">
         {{ form.hidden_tag() }} {{form.category.label}} {{form.category()}} {{ form.review.label}} {{ form.review(cols='100',rows='100')}}
         <div class="row">
@@ -11,8 +11,8 @@
         </div>
     </form>
     {% if prediction %}
-    <div class="row">
-        <img src="{{url_for('static', filename='images/' + prediction + '.jpeg')}}" height="100" />
+    <div class="">
+        <img src="{{url_for('static', filename='images/' + prediction + '.jpeg')}}" height="" />
         <br /> The predicted probability is :
         <p style="color:red;">{{ prob }} %.</p>
         <div class="six columns">
