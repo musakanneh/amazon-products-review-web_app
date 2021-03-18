@@ -7,7 +7,8 @@ from sklearn.utils.validation import check_X_y, check_is_fitted
 from sklearn.linear_model import LogisticRegression
 from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-from sklearn.externals import joblib
+import joblib
+# from sklearn.externals 
 from scipy import sparse
 import gzip
 import re
@@ -55,6 +56,8 @@ if __name__ == "__main__":
                       'Sports_and_Outdoors', 'Toys_and_Games', 'Video_Games']
 
     for name in category_names:
+        """
+        """
         fileloc = 'data/reviews_' + name + '_5.json.gz'
         df = getDF(fileloc)
         df['reviewText'].fillna("unknown", inplace=True)

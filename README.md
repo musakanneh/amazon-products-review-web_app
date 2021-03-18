@@ -34,11 +34,4 @@ The following technical tools and requirements will facilitate the development o
 - [ ] ...
 
 ## Dataset
-- https://cseweb.ucsd.edu/~jmcauley/datasets.html#clothing_fit
-- http://jmcauley.ucsd.edu/data/amazon/
-- https://github.com/Kavitha-Kothandaraman/Product-Recommendation-Systems/blob/master/Product_Recommendation_Systems.ipynb
-- https://github.com/csbanon/bert-product-rating-predictor/blob/master/bert-product-rating-predictor.ipynb
-- https://cseweb.ucsd.edu/~jmcauley/datasets.html#clothing_fit
-- https://github.com/mohansaloni04/Prediction-of-product-rating-based-on-online-reviews/blob/master/individual_reviews%20(1).ipynb
-- https://github.com/abr-98/Realtime-Amazon-Product-Recommender
-- https://github.com/jonathangiber/GuessRating/blob/master/Final.py
+Dataset
