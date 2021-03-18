@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import joblib
-# from sklearn.externals 
+# from sklearn.externals
 from scipy import sparse
 import gzip
 import re

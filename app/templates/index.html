@@ -4,9 +4,15 @@
     Amazon Review Sentiment Analysis Web Application
 </header>
 <div class="container">
-    <div>
+    <div class="inner">
         <form method="POST">
-            {{ form.hidden_tag() }} {{form.category.label}} {{form.category()}} {{ form.review.label}} {{ form.review(cols='100',rows='20')}}
+            <div class="title-cover">
+                <div>{{ form.hidden_tag() }}</div>
+                <div>{{form.category.label}} </div> &nbsp;&nbsp;&nbsp;&nbsp;
+                <div>{{form.category()}}</div>
+            </div>
+            <div>{{ form.review.label}}</div>
+            <br> {{ form.review(cols='120',rows='10')}}
             <br>
             <div>
                 <button type="submit" class="button-primary">Submit your review</button>
@@ -27,7 +33,7 @@
     </div>
 </div>
 <footer>
-    <p>Make by: Musa Kanneh - African Leadership University</p>
+    Made by: Musa Kanneh - African Leadership University
 </footer>
 {% endblock body %} {% block js %}
 <script type="text/javascript">

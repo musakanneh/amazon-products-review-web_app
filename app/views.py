@@ -1,8 +1,7 @@
 import logging
 import json
 import numpy as np
-import re
-import string
+import re, string
 from flask import render_template
 from flask_wtf import Form
 from wtforms import fields
@@ -19,7 +18,7 @@ logger = logging.getLogger('app')
 class PredictForm(Form):
     """Fields for Predict
     """
-    category = fields.SelectField('Category', choices=[('Automotive', 'Automotive'),
+    category = fields.SelectField('Select a category  to review: ', choices=[('Automotive', 'Automotive'),
                                                        ('Baby', 'Baby'),
                                                        ('Clothing_Shoes_and_Jewelry',
                                                         'Clothing Shoes and Jewelry'),
@@ -40,7 +39,7 @@ class PredictForm(Form):
                                                        ('Toys_and_Games',
                                                         'Toys and Games'),
                                                        ('Video_Games', 'Video Games')])
-    review = fields.TextAreaField('Review:', validators=[Required()])
+    review = fields.TextAreaField('Write a review:', validators=[Required()])
 
     submit = fields.SubmitField('Submit')
 
