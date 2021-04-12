@@ -38,12 +38,6 @@ The following technical tools and requirements will facilitate the development o
 - Apriori algorithm that uses association rules to build our prediction model.
 - Flask web framework: to facilitate the backend development
 
-## Project TODOs
-- [ ] Implement and classify sentiment analysis
-- [ ] ...
-
-## Dataset
-Dataset
 
 ## References
 [1] Wang, Sida, and Christopher D. Manning. "Baselines and bigrams: Simple, good sentiment and topic classification." Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics: Short Papers-Volume 2. Association for Computational Linguistics, 2012.
