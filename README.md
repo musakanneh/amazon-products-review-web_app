@@ -1,6 +1,11 @@
 # A Product Review-Based Rating System for E-Commerce Sales
 ## End result
 ![alt](app/static/images/pic.png)
+### To run the app, please do the following:
+```
+python build run.py
+```
+The app can then be accessed via: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 ## Introduction
 Recommender systems have influenced and redefined online product marketing based on clients' preferences. This process helps digital enterprises scale their businesses, thus generating more revenue based on product performance analyses. This proposal aims to design and build software that will help Rwanda's e-commerce businesses review customers' feedback on a five-star rating proceeding to improve product marketing and increase revenue generation. The author is highly motivated to implement this project, given his need to leverage his Data Mining skills to help businesses online businesses thrive - using techniques like Natural Language Processing and Sentiment Analysis.
 ## Problem
@@ -37,3 +42,9 @@ The following technical tools and requirements will facilitate the development o
 
 ## Dataset
 Dataset
+
+## References
+[1] Wang, Sida, and Christopher D. Manning. "Baselines and bigrams: Simple, good sentiment and topic classification." Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics: Short Papers-Volume 2. Association for Computational Linguistics, 2012.
+
+## Author
+the ehe
