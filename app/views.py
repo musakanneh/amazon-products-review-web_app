@@ -18,7 +18,7 @@ logger = logging.getLogger('app')
 
 class PredictForm(Form):
     """Fields for Predict"""
-    category = fields.SelectField('Select a category  to review: ', choices=[('Automotive', 'Automotive'),
+    category = fields.SelectField('Please select a category  to review ', choices=[('Automotive', 'Automotive'),
                                                                              ('Baby',
                                                                               'Baby'),
                                                                              ('Clothing_Shoes_and_Jewelry',
@@ -40,7 +40,7 @@ class PredictForm(Form):
                                                                              ('Toys_and_Games',
                                                                               'Toys and Games'),
                                                                              ('Video_Games', 'Video Games')])
-    review = fields.TextAreaField('Write a review:', validators=[Required()])
+    review = fields.TextAreaField('Write a review below:', validators=[Required()])
     submit = fields.SubmitField('Submit')
 
 

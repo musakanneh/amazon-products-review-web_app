@@ -6,7 +6,7 @@ Online globally businesses have experienced a significant improvement, admits th
 ## Solution
 The system takes a review of various users and processes them using sentiment-based analyses to classify their ratings. Based on the review and analyses, the system will specify whether the E-commerce enterprise's product is either good, bad, or worst - on a scale from one to five. To achieve this, the author will use sentiment-based keywords coupled with positivity or negativity weight from users via a comprehensive user interface (UI) of a web application, rank the ratings and display them via the platform's UI. This system is a web application where users will view various products and give reviews about the merchandise. This system will help many E-commerce enterprises improve or maintain their services based on the customer review and improve the merchandise based on the customer review.
 ### Beta Result
-![alt](app/static/images/screenshot.png)
+![alt](app/static/images/pic.png)
 ## Objectives
 The main objective of the project is to build a system that helps to improve sales on e-commerce platforms. The project’s specific objectives of the system are as follow:
 - Get users/customers reviews via the platform regarding a specific rating
