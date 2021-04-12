@@ -1,13 +1,14 @@
 import logging
 import json
 import numpy as np
-import re, string
+import re
+import string
 from flask import render_template
 from flask_wtf import Form
 from wtforms import fields
 from wtforms.validators import Required
 from wtforms.widgets import TextArea
-from sklearn.externals import joblib
+import joblib
 from scipy import sparse
 
 from . import app
@@ -16,39 +17,36 @@ logger = logging.getLogger('app')
 
 
 class PredictForm(Form):
-    """Fields for Predict
-    """
+    """Fields for Predict"""
     category = fields.SelectField('Select a category  to review: ', choices=[('Automotive', 'Automotive'),
-                                                       ('Baby', 'Baby'),
-                                                       ('Clothing_Shoes_and_Jewelry',
-                                                        'Clothing Shoes and Jewelry'),
-                                                       ('Digital_Music',
-                                                        'Digital Music'),
-                                                       ('Electronics',
-                                                        'Electronics'),
-                                                       ('Grocery_and_Gourmet_Food',
-                                                        'Grocery and Gourmet Food'),
-                                                       ('Home_and_Kitchen',
-                                                        'Home and Kitchen'),
-                                                       ('Kindle_Store',
-                                                        'Kindle Store'),
-                                                       ('Pet_Supplies',
-                                                        'Pet Supplies'),
-                                                       ('Sports_and_Outdoors',
-                                                        'Sports and Outdoors'),
-                                                       ('Toys_and_Games',
-                                                        'Toys and Games'),
-                                                       ('Video_Games', 'Video Games')])
+                                                                             ('Baby',
+                                                                              'Baby'),
+                                                                             ('Clothing_Shoes_and_Jewelry',
+                                                                              'Clothing Shoes and Jewelry'),
+                                                                             ('Digital_Music',
+                                                                              'Digital Music'),
+                                                                             ('Electronics',
+                                                                              'Electronics'),
+                                                                             ('Grocery_and_Gourmet_Food',
+                                                                              'Grocery and Gourmet Food'),
+                                                                             ('Home_and_Kitchen',
+                                                                              'Home and Kitchen'),
+                                                                             ('Kindle_Store',
+                                                                              'Kindle Store'),
+                                                                             ('Pet_Supplies',
+                                                                              'Pet Supplies'),
+                                                                             ('Sports_and_Outdoors',
+                                                                              'Sports and Outdoors'),
+                                                                             ('Toys_and_Games',
+                                                                              'Toys and Games'),
+                                                                             ('Video_Games', 'Video Games')])
     review = fields.TextAreaField('Write a review:', validators=[Required()])
-
     submit = fields.SubmitField('Submit')
 
 
 @app.route('/', methods=('GET', 'POST'))
 def index():
-    """
-    Index page
-    """
+    """Index page"""
     form = PredictForm()
     target_names = ['Negative', 'Positive']
     predicted = None
@@ -56,8 +54,7 @@ def index():
     proba = None
 
     if form.validate_on_submit():
-        """
-        validates and store the submitted values
+        """validates and store the submitted values
         """
         submitted_data = form.data
         category = submitted_data['category']
@@ -66,9 +63,7 @@ def index():
                           'Home_and_Kitchen', 'Kindle_Store', 'Pet_Supplies',
                           'Sports_and_Outdoors', 'Toys_and_Games', 'Video_Games']
 
-        """
-        Retrieve values from form; then unpickles my model
-        """
+        """Retrieve values from form; then unpickles my model"""
         review = re.compile(f'([{string.punctuation}“”¨«»®´·º½¾¿¡§£₤‘’])').sub(
             r' \1 ', submitted_data['review'])
         for name in category_names:
@@ -85,9 +80,7 @@ def index():
         my_prediction = estimator.predict(review.multiply(r))
         my_proba = estimator.predict_proba(review.multiply(r))
 
-        """
-        Return only the Predicted iris species
-        """
+        """Return only the Predicted iris species"""
         predicted = target_names[int(my_prediction)]
         if my_prediction < 0.5:
             proba = str(round(my_proba[0][0]*100, 2))

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>{% block title %}AMAZON Customer reviews REVIEW WebApp{% endblock title %}</title>
+    <title>{% block title %}Amazon Customer reviews{% endblock title %}</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"> {% block header %}{% endblock header %}
@@ -17,14 +17,39 @@
 
     <style>
         * {
-            background-color: #FFFFFF;
             padding: 0;
             margin: 0;
             font-family: sans-serif, Officina Sans Bold;
+            color: #606060;
+            font-weight: bold;
+        }
+        
+        .category-title {
+            width: 44%;
+            font-size: 14px;
+            background-color: #F0C24D;
+            color: #ffffff;
+            border-radius: 2px;
+            border-style: none;
+            padding: 1rem;
+        }
+        
+        .form-input {}
+        
+        .category-main {
+            height: 40px;
+            width: 45%;
+            background-color: #303030;
+            padding: 1rem;
+            border-radius: 2px;
+            text-align: right;
+            outline: none;
+            display: flex;
+            cursor: pointer;
+            justify-content: flex-start;
         }
         
         .title-cover {
-            /*border: 1px solid red;*/
             display: flex;
             justify-content: flex-start;
             margin: 1rem 0;
@@ -64,7 +89,6 @@
         
         footer {
             background: #232F3E;
-            /*height: 70px;*/
             width: 100%;
             padding: 1.5rem 0;
             left: 0;
@@ -80,15 +104,12 @@
             flex-direction: column;
             width: 100%;
             margin: auto;
-            /*border: 1px solid red;*/
         }
         
         form {
-            /*background-color: red;*/
             margin-top: 2rem !important;
-            width: 771px;
+            width: 70%;
             margin: auto;
-            /*display: flex;*/
         }
     </style>
 </body>

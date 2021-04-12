@@ -1,32 +1,33 @@
 {% extends 'base.html' %} {% block body %}
 <header>
-    <!--  <h2 class="">Amazon Product Reviews</h2> -->
     Amazon Review Sentiment Analysis Web Application
 </header>
 <div class="container">
     <div class="inner">
         <form method="POST">
             <div class="title-cover">
-                <div>{{ form.hidden_tag() }}</div>
-                <div>{{form.category.label}} </div> &nbsp;&nbsp;&nbsp;&nbsp;
-                <div>{{form.category()}}</div>
+                <!-- <div class="the-form">{{ form.hidden_tag() }}</div> -->
+                <div class="category-title ">{{form.category.label}} </div> &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="category-main ">{{form.category()}}</div>
             </div>
-            <div>{{ form.review.label}}</div>
-            <br> {{ form.review(cols='120',rows='10')}}
+            <br>
+            <div style="font-size: 2.5rem">{{ form.review.label}}</div>
+            <br>
+            <div class="form-input">{{ form.review(cols='145 ',rows='10 ')}}</div>
             <br>
             <div>
-                <button type="submit" class="button-primary">Submit your review</button>
+                <button type="submit " class="button-primary ">Submit your review</button>
             </div>
         </form>
     </div>
     <div>
         {% if prediction %}
-        <div class="">
-            <img src="{{url_for('static', filename='images/' + prediction + '.jpeg')}}" />
+        <div class=" ">
+            <img src="{{url_for( 'static ', filename='images/ ' + prediction + '.jpeg ')}} " />
             <br /> The predicted probability is :
-            <p style="color:green;">{{ prob }} %.</p>
+            <p style="color:green; ">{{ prob }} %.</p>
             <div>
-                <!-- <div id="chart"></div> -->
+                <!-- <div id="chart "></div> -->
             </div>
         </div>
         {% endif %}
@@ -36,6 +37,6 @@
     Made by: Musa Kanneh - African Leadership University
 </footer>
 {% endblock body %} {% block js %}
-<script type="text/javascript">
+<script type="text/javascript ">
 </script>
 {% endblock js %}

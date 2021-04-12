@@ -1,5 +1,6 @@
 import logging
-from sklearn.externals import joblib
+# from sklearn.externals import joblib
+import joblib
 
 from flask import Flask
 from scipy import sparse
