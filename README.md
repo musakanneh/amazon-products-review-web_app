@@ -6,7 +6,7 @@
 python build run.py
 ```
 The app can then be accessed via: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
-### You can also find the video recording here:
+### You can also find the video recording [here](https://drive.google.com/file/d/1ylyq3qRWvz7yo2pKHfZFXYP9ZdTjyWrc/view?usp=sharing)
 
 ## Introduction
 Recommender systems have influenced and redefined online product marketing based on clients' preferences. This process helps digital enterprises scale their businesses, thus generating more revenue based on product performance analyses. This proposal aims to design and build software that will help Rwanda's e-commerce businesses review customers' feedback on a five-star rating proceeding to improve product marketing and increase revenue generation. The author is highly motivated to implement this project, given his need to leverage his Data Mining skills to help businesses online businesses thrive - using techniques like Natural Language Processing and Sentiment Analysis.
